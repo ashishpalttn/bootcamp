@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercise</title>
+	<script type="text/javascript">
+		var arr= new Array();
+		arr[0] = {name:'niraj',age:28,salary:4500,dob:'1/12/20'};
+		arr[1]	={name:'toffy',age:28,salary:4800,dob:'1/11/20'};
+		arr[2]={name:'sahil',age:22,salary:5100,dob:'1/10/20'};
+		arr[3]={name:'molly',age:22,salary:700,dob:'1/09/20'};
+		arr[4]={name:'prashant',age:22,salary:5500,dob:'1/08/20'};
+		for(var i=0;i< arr.length;i++){
+			if(arr[i].salary>5000){
+				document.write(arr[i].name +" ");
+			}
+		}
+	document.write( "<br>");
+	document.write("<br>");
+
+
+		arr.sort((a,b)=>{
+			if(a.age>b.age)return 1;
+			if(a.age<b.age) return -1;
+			return 0;
+		})
+		for(var i=0;i<arr.length;i++){
+		document.write(arr[i].name+",          " +arr[i].age+",        "+ arr[i].salary+",        "+arr[i].dob);
+		document.write("<br>");
+	}
+	document.write("<br>");
+
+
+		for(var i=0;i<arr.length;i++){
+			if((arr[i].salary<1000)&&(arr[i].salary>20)){
+				arr[i].salary=(arr[i].salary)*5;
+				document.write(arr[i].salary);
+			
+			}
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>
